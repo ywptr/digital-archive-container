@@ -9,7 +9,7 @@ DAC Reference Implementation
 Copyright © 2026 Yogi / contributors
 Licensed under Apache License 2.0
 
-Background
+## Background
 
 This project began with a fairly mundane problem: trying to identify old digital files accumulated across NAS storage and cloud drives.
 
