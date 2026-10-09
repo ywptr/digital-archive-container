@@ -2,8 +2,7 @@
   "dac_version": "0.1-draft",
   "example_status": "illustrative-non-normative",
   "archive": {
-    "id": "example-ai-generated-presentation",
-    "title": "AI-generated presentation with PDF derivative"
+    "id": "example-ai-generated-presentation"
   },
   "artifacts": [
     {
@@ -11,11 +10,14 @@
       "role": "source",
       "path": "payload/source/presentation.pptx",
       "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-      "title": null,
       "integrity": {
         "algorithm": "sha-256",
         "digest": null,
         "status": "not-yet-computed"
+      },
+      "metadata_extraction": {
+        "status": "not-run",
+        "records": []
       }
     },
     {
@@ -23,11 +25,14 @@
       "role": "derivative",
       "path": "payload/derivatives/presentation.pdf",
       "media_type": "application/pdf",
-      "title": null,
       "integrity": {
         "algorithm": "sha-256",
         "digest": null,
         "status": "not-yet-computed"
+      },
+      "metadata_extraction": {
+        "status": "not-run",
+        "records": []
       }
     }
   ],
