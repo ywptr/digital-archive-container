@@ -1,0 +1,101 @@
+{
+  "dac_version": "0.1-draft",
+  "example_status": "illustrative-non-normative",
+  "archive": {
+    "id": "example-ai-generated-presentation",
+    "title": "AI-generated presentation with PDF derivative"
+  },
+  "artifacts": [
+    {
+      "id": "presentation-source",
+      "role": "source",
+      "path": "payload/source/presentation.pptx",
+      "media_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+      "title": null,
+      "integrity": {
+        "algorithm": "sha-256",
+        "digest": null,
+        "status": "not-yet-computed"
+      }
+    },
+    {
+      "id": "presentation-pdf",
+      "role": "derivative",
+      "path": "payload/derivatives/presentation.pdf",
+      "media_type": "application/pdf",
+      "title": null,
+      "integrity": {
+        "algorithm": "sha-256",
+        "digest": null,
+        "status": "not-yet-computed"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "type": "derived-from",
+      "subject": "presentation-pdf",
+      "object": "presentation-source",
+      "method": "export",
+      "assertion_status": "depositor-reported"
+    }
+  ],
+  "provenance": {
+    "events": [
+      {
+        "id": "generation-event",
+        "action": "content-generation",
+        "agent": {
+          "type": "service",
+          "name": "ChatGPT"
+        },
+        "output_artifact": "presentation-source",
+        "assertion_status": "depositor-reported",
+        "evidence": []
+      },
+      {
+        "id": "export-event",
+        "action": "export",
+        "input_artifact": "presentation-source",
+        "output_artifact": "presentation-pdf",
+        "assertion_status": "depositor-reported",
+        "evidence": []
+      }
+    ]
+  },
+  "rights": {
+    "assessment_status": "unknown",
+    "claims": [],
+    "licenses": [],
+    "applicable_terms": [],
+    "notes": "Do not infer copyright status, ownership, or permission solely from the use of an AI system."
+  },
+  "experience": {
+    "access_paths": [
+      {
+        "artifact": "presentation-source",
+        "purpose": "view-and-edit",
+        "requirements": [
+          "compatible presentation software"
+        ],
+        "status": "not-tested"
+      },
+      {
+        "artifact": "presentation-pdf",
+        "purpose": "view",
+        "requirements": [
+          "PDF-compatible reader"
+        ],
+        "status": "not-tested"
+      }
+    ]
+  },
+  "preservation": {
+    "limitations": [
+      {
+        "claim": "The PDF export may not retain all presentation features.",
+        "status": "possible-not-yet-assessed"
+      }
+    ]
+  }
+}
