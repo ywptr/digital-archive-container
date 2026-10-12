@@ -96,6 +96,28 @@ ai-generated-music.dac/
 
 The actual MP3 is not included in this repository fixture. Use a local copy for implementation testing unless publication of the file is intentional and appropriate.
 
+## Three-level implementation plan
+
+Apply the shared DAC implementation levels to this case:
+
+### Level 1 — Identify and inventory
+- Identify the audio format and report ambiguity, file size, and a SHA-256 digest computed from the actual bytes.
+- Perform basic frame/stream checks where practical.
+- Preserve the original MP3 unchanged.
+
+### Level 2 — Extract and describe
+- Parse supported MPEG audio properties and recognized ID3 versions/frames.
+- Preserve or account for unknown frames where feasible, with source identifiers and extraction status.
+- Separate embedded tags from values derived by the parser and from depositor assertions.
+
+### Level 3 — Validate the usable experience
+- Where feasible, test playback using identified software/decoder versions.
+- Record whether playback succeeded, any parsing or decoding warnings, and relevant playback dependencies.
+- Check duration or seek behavior when relevant, particularly for variable-bitrate or malformed/truncated files.
+- Do not infer subjective audio quality or legal rights from successful playback.
+
+Level 3 is optional for byte preservation; an untested file can still be archived with its validation status clearly recorded.
+
 ## Acceptance criteria
 
 - A valid MP3 with no descriptive tags can be archived.
