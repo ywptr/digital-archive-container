@@ -99,6 +99,29 @@ ai-generated-presentation.dac/
 
 These names are illustrative. The actual PPTX and PDF are not included in this repository fixture. Use local copies for testing unless publication of the actual files is intentional and appropriate.
 
+## Three-level implementation plan
+
+Apply the shared DAC implementation levels to this case:
+
+### Level 1 — Identify and inventory
+- Identify PPTX and PDF independently, report confidence/ambiguity, file size, and separate SHA-256 digests computed from the actual bytes.
+- Run basic package/document structural checks where practical.
+- Preserve both original payloads unchanged.
+
+### Level 2 — Extract and describe
+- Extract supported PPTX package properties, core properties, relationships, and presentation structure.
+- Extract supported PDF document information, XMP metadata, page structure, and other supported document features.
+- Record each value's source and extraction status; do not treat metadata as proof of authorship or lineage.
+- Keep the declared PDF-to-PPTX relationship separate from format-derived observations.
+
+### Level 3 — Validate the usable experience
+- Where feasible, open/render the PPTX and PDF with identified software and versions.
+- Check relevant experience differences, such as editability, slide rendering, animations, notes, embedded media, forms, links, or accessibility structure, when those features are present and relevant.
+- Report only observed differences; do not assume the PDF lost any particular feature merely because PDF is a derivative.
+- Record dependencies and untested behavior.
+
+Level 3 is optional for byte preservation and must not be represented as complete semantic equivalence testing unless that work was actually performed.
+
 ## Acceptance criteria
 
 - Both artifacts can be present in the same archive and identified independently.
