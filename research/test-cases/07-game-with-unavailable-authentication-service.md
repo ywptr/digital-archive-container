@@ -96,6 +96,21 @@ dead-auth-server-game.dac/
 
 This is illustrative, not a required structure. Preserve only files that are actually available and may be retained lawfully. Keep logs and screenshots separate from original payloads, and review them for credentials and personal information before archiving or sharing.
 
+## Four preservation targets
+
+These targets describe preservation outcomes, not implementation stages. Evaluate them independently; do not collapse them into a single `preserved` Boolean.
+
+| Target | Question | Evidence to record |
+|---|---|---|
+| **1. Original artifact** | Are the original bytes retained and independently verifiable? | Actual payload inventory, byte-level digests, source/derivative relationships, and any known gaps. |
+| **2. Execution or use environment** | Is the environment needed to access the artifact available, documented, or reconstructable? | Relevant applications, decoders, operating systems, hardware, services, dependencies, versions, configuration, licensing/access constraints, and unavailable components. For non-executable artifacts, interpret this as the relevant viewing, reading, or playback environment. |
+| **3. Behavior** | Have the artifact's intended functions been tested, and what happened? | Specific tests, environment, tool/version, results, warnings, dependencies, failures, and untested functions. A launch or open operation alone does not prove all intended behavior. |
+| **4. Historical experience and fidelity** | How closely does the accessible experience match the historically intended or observed experience? | Relevant comparisons and evidence for rendering, timing, sound, interaction, editability, structure, or other case-specific properties; known differences; uncertainty; and explicit limits on the assessment. Do not claim fidelity without evidence. |
+
+For this case, distinguish retained client files from available dependencies, local/offline behavior from online behavior, and any substitute service from the original service. A failed connection is a dated observation, not by itself proof of permanent shutdown.
+
+A target may be **unknown**, **not tested**, **partially achieved**, **blocked**, or **supported by evidence**; choose terminology that accurately reflects the evidence. These are candidate status distinctions for evaluation, not a finalized DAC schema. A useful archive may preserve the original artifact even when the environment is unavailable, behavior is untested, or historical fidelity cannot be assessed.
+
 ## Acceptance criteria
 
 - Available local files are inventoried and hashed from actual bytes.
