@@ -81,6 +81,21 @@ purchased-drm-free-publication.dac/
 
 The evidence files shown are optional examples, not assumed available. Do not fabricate them or include personal/account information in a public fixture. Keep actual purchased content and receipts local unless publication is intentional, lawful, and appropriate.
 
+## Four preservation targets
+
+These targets describe preservation outcomes, not implementation stages. Evaluate them independently; do not collapse them into a single `preserved` Boolean.
+
+| Target | Question | Evidence to record |
+|---|---|---|
+| **1. Original artifact** | Are the original bytes retained and independently verifiable? | Actual payload inventory, byte-level digests, source/derivative relationships, and any known gaps. |
+| **2. Execution or use environment** | Is the environment needed to access the artifact available, documented, or reconstructable? | Relevant applications, decoders, operating systems, hardware, services, dependencies, versions, configuration, licensing/access constraints, and unavailable components. For non-executable artifacts, interpret this as the relevant viewing, reading, or playback environment. |
+| **3. Behavior** | Have the artifact's intended functions been tested, and what happened? | Specific tests, environment, tool/version, results, warnings, dependencies, failures, and untested functions. A launch or open operation alone does not prove all intended behavior. |
+| **4. Historical experience and fidelity** | How closely does the accessible experience match the historically intended or observed experience? | Relevant comparisons and evidence for rendering, timing, sound, interaction, editability, structure, or other case-specific properties; known differences; uncertainty; and explicit limits on the assessment. Do not claim fidelity without evidence. |
+
+For this case, distinguish retained PDF bytes from available rendering software, successful rendering/text extraction, and the original reading experience. Technical readability or absence of detected DRM does not establish permission to redistribute.
+
+A target may be **unknown**, **not tested**, **partially achieved**, **blocked**, or **supported by evidence**; choose terminology that accurately reflects the evidence. These are candidate status distinctions for evaluation, not a finalized DAC schema. A useful archive may preserve the original artifact even when the environment is unavailable, behavior is untested, or historical fidelity cannot be assessed.
+
 ## Acceptance criteria
 
 - A PDF can be preserved even when descriptive metadata or purchase evidence is missing.
